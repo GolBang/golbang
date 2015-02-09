@@ -1,5 +1,5 @@
-# golbang
-Gol!(Pronounced Gol-Bang) is annotation-based HTTP Client for Java
+#Gol!
+##Gol!(Pronounced Gol-Bang) is annotation-based HTTP Client for Java
 ---
 ```Java
 // Http Request Configuration
@@ -12,6 +12,7 @@ public interface ApiRequest {
   public void getUserAsync(@PathVariable("id") String id, OnSuccessHandler handler);
   
   @Request(path="/users/{id}")
+  @IsAsyncRequest(false)
   public User getUser(@PathVariable String id);
 }
 
