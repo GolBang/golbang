@@ -26,7 +26,7 @@ public class Test {
       public void onSuccess(User user) {
         System.out.println(user.getId() + ": " + user.getName());
       }
-    }
+    });
     
     // Synchronous request
     User user = request.getUser("123");
