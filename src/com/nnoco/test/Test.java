@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.nnoco.golbang.GolBang;
+import com.nnoco.golbang.annotation.Callback;
 import com.nnoco.golbang.util.KeyValue;
 
 
@@ -21,5 +22,13 @@ public class Test {
 				new KeyValue<String, String>("query", "String"),
 				"쿼리 2 스트림 타입!",
 				mapHeaderGroup);
+		
+		requester.getUser("123", new AbstractGetUserCallback() {
+			@Override
+			@Callback.OnComplete
+			public void onComplete() {
+				System.out.println("on complete");
+			}
+		});
 	}
 }

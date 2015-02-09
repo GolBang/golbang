@@ -2,9 +2,10 @@ package com.nnoco.test;
 
 import java.util.Map;
 
-import com.nnoco.golbang.annotation.IsAsyncRequest;
+import com.nnoco.golbang.annotation.Callback;
 import com.nnoco.golbang.annotation.Config;
 import com.nnoco.golbang.annotation.Header;
+import com.nnoco.golbang.annotation.IsAsyncRequest;
 import com.nnoco.golbang.annotation.PathVariable;
 import com.nnoco.golbang.annotation.QueryString;
 import com.nnoco.golbang.annotation.Request;
@@ -39,4 +40,8 @@ public interface ExampleTemplate {
 	@IgnoreConfig
 	
 	 */
+	
+	@Request("/user")
+	public void getUser(@PathVariable("id")String id,
+						@Callback GetUserCallback callback);
 }

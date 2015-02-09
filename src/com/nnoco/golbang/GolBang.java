@@ -5,11 +5,13 @@ import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.nnoco.golbang.annotation.Callback;
 import com.nnoco.golbang.annotation.Header;
 import com.nnoco.golbang.annotation.PathVariable;
 import com.nnoco.golbang.annotation.QueryString;
 import com.nnoco.golbang.annotation.RequestBody;
 import com.nnoco.golbang.annotation.RequestPath;
+import com.nnoco.golbang.annotation.handler.DefaultCallbackHandler;
 import com.nnoco.golbang.annotation.handler.DefaultHeaderHandler;
 import com.nnoco.golbang.annotation.handler.DefaultPathVariableHandler;
 import com.nnoco.golbang.annotation.handler.DefaultQueryStringHandler;
@@ -55,6 +57,7 @@ public class GolBang {
 		setParamAnnoatationHandler(RequestPath.class, new DefaultRequestPathHandler());
 		setParamAnnoatationHandler(QueryString.class, new DefaultQueryStringHandler());
 		setParamAnnoatationHandler(PathVariable.class, new DefaultPathVariableHandler());
+		setParamAnnoatationHandler(Callback.class, new DefaultCallbackHandler());
 		
 	}
 }
