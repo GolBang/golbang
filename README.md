@@ -1,6 +1,7 @@
 # golbang
 Gol!(Pronounced Gol-Bang) is annotation-based HTTP Client for Java
 ---
+```Java
 // Http Request Configuration
 @Config(server="http://www.nnoco.com/api",
   header={"Content-Type=application/json",
@@ -31,3 +32,4 @@ public class Test {
     System.out.println(user.getId() + ": " + user.getName());
   }
 }
+```
